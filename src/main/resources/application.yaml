@@ -1,0 +1,16 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+        issues-uri: http://localhost:8080/realms/ilker
+        jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issues-rui}/protocol/openid-connect/certs
+
+jwt:
+  auth:
+    convertor:
+      principle-attribute:
+      resource-id:
+
+server:
+  port: 8081
